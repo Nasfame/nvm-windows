@@ -82,7 +82,7 @@ func main() {
 	fsutil.Touch(tmpdir)
 
 	fmt.Println("Downloading NVM for Windows v" + version)
-	success := web.Download("https://github.com/coreybutler/nvm-windows/releases/download/"+version+"/github.com/coreybutler/nvm-windows-noinstall.zip", zipfile)
+	success := web.Download("https://github.com/coreybutler/nvm-windows/releases/download/"+version+"/nvm-noinstall.zip", zipfile)
 	if !success {
 		os.RemoveAll(tmpdir)
 		os.Exit(1)
