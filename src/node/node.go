@@ -12,7 +12,6 @@ import (
 	"regexp"
 	"strings"
 
-	// "../semver"
 	"github.com/blang/semver"
 )
 
