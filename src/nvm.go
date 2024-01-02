@@ -18,18 +18,18 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/coreybutler/nvm-windows/nvm/arch"
-	"github.com/coreybutler/nvm-windows/nvm/encoding"
-	"github.com/coreybutler/nvm-windows/nvm/file"
-	"github.com/coreybutler/nvm-windows/nvm/node"
-	"github.com/coreybutler/nvm-windows/nvm/web"
-
 	"github.com/blang/semver"
 	// "github.com/fatih/color"
 	"github.com/coreybutler/go-where"
 	"github.com/olekukonko/tablewriter"
 	"golang.org/x/sys/windows"
 	"golang.org/x/sys/windows/registry"
+
+	"github.com/coreybutler/nvm-windows/nvm/arch"
+	"github.com/coreybutler/nvm-windows/nvm/encoding"
+	"github.com/coreybutler/nvm-windows/nvm/file"
+	"github.com/coreybutler/nvm-windows/nvm/node"
+	"github.com/coreybutler/nvm-windows/nvm/web"
 )
 
 const (
@@ -447,7 +447,7 @@ func install(version string, cpuarch string) {
 
 		// Warn the user if they're attempting to install without verifying the remote SSL cert
 		if !env.verifyssl {
-			fmt.Println("\nWARNING: The remote SSL certificate will not be validated during the download process.\n")
+			fmt.Println("\nWARNING: The remote SSL certificate will not be validated during the download process.")
 		}
 
 		// Download node
